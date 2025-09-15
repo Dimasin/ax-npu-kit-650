@@ -223,23 +223,29 @@ static inline int ReadFrame(AX_VIDEO_FRAME_T& frame, const char* filename, const
     int height = img.rows;
 
     cv::Mat dst;
+    //std::vector<uint8_t> image(img.rows * img.cols * 3, 0);
+    //cv::Mat dst(img.rows, img.cols, CV_8UC3, image.data());
+    //cv::copyMakeBorder(img, dst, 0, 0, 0, 0, cv::BORDER_CONSTANT, cv::Scalar(0, 0, 0));
+    
+    ret = AllocFrame(frame, token, width, height, eDtype);
+    if (AX_SKEL_SUCC != ret) {
+        return ret;
+    }
+    
     switch (eDtype) {
         case AX_FORMAT_YUV420_SEMIPLANAR: {
             dst = BGR2YUV_NV12(img);
-            ret = AllocFrame(frame, token, width, height, eDtype);
-            if (AX_SKEL_SUCC != ret) {
-                return ret;
-            }
             memcpy((void*)frame.u64VirAddr[0], dst.data, frame.u32FrameSize);
             return AX_SKEL_SUCC;
         }
 
         case AX_FORMAT_BGR888: {
-            std::vector<cv::Mat> mats;
-            cv::split(img, mats);
-            memcpy((void*)frame.u64VirAddr[0], mats[0].data, frame.u32FrameSize / 3);
-            memcpy((void*)frame.u64VirAddr[1], mats[1].data, frame.u32FrameSize / 3);
-            memcpy((void*)frame.u64VirAddr[2], mats[2].data, frame.u32FrameSize / 3);
+            //std::vector<cv::Mat> mats;
+            //cv::split(img, mats);
+            //memcpy((void*)frame.u64VirAddr[0], mats[0].data, frame.u32FrameSize / 3);
+            //memcpy((void*)frame.u64VirAddr[1], mats[1].data, frame.u32FrameSize / 3);
+            //memcpy((void*)frame.u64VirAddr[2], mats[2].data, frame.u32FrameSize / 3);
+            memcpy((void*)frame.u64VirAddr[0], img.data, frame.u32FrameSize);
             return AX_SKEL_SUCC;
         }
 

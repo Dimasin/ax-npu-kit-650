@@ -47,7 +47,6 @@ cmake-build*
 *.egg-info/
 __pycache__/
 
-ax650n_bsp_sdk
-
-# msp
-msp/out/bin/
+ax650n_bsp_sdk/
+build/
+third-party/

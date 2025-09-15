@@ -108,18 +108,20 @@ namespace skel {
                 std::vector<skel::detection::Object> proposals;
                 for (int i = 0; i < m_output_num; i++)
                 {
-                    auto& output_info = m_io_info->pOutputs[i];
+                    //auto& output_info = m_io_info->pOutputs[i];
                     auto& buf = m_io.pOutputs[i];
                     utils::cache_io_flush(&buf);
 
                     float* pfBuf = (float*)buf.pVirAddr;
-                    skel::detection::generate_yolox_proposals(m_anchors[i], output_info, pfBuf,
-                                                              m_config.cls_thresh, m_config.min_size, proposals);
+                    int32_t stride = (1 << i) * 8;
+                    //skel::detection::generate_yolox_proposals(m_anchors[i], output_info, pfBuf, m_config.cls_thresh, m_config.min_size, proposals);
+                    skel::detection::generate_proposals_yolov8_native(stride, pfBuf, m_config.cls_thresh, proposals, m_input_size[0], m_input_size[1], 3);
                 }
 
                 // nms & rescale coords & select class
                 outputs.clear();
                 skel::detection::reverse_letterbox(proposals, outputs, m_config.nms_thresh, m_input_size[0], m_input_size[1], img.u32Height, img.u32Width);
+                //skel::detection::get_out_bbox(proposals, outputs, m_config.nms_thresh, m_input_size[0], m_input_size[1], img.u32Height, img.u32Width);
 
                 if (!m_config.want_classes.empty())
                 {

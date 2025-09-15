@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     const char* filename = argv[1];
     AX_SKEL_RESULT_T *pstResult = nullptr;
     AX_SKEL_CONFIG_T stConfig = {0};
-    bool bUseCallback = true;
+    bool bUseCallback = false;
 
     memset(&stHandleParam, 0, sizeof(AX_SKEL_HANDLE_PARAM_T));
 
@@ -67,7 +67,8 @@ int main(int argc, char** argv) {
     frame.nStreamId = 0;
     frame.nFrameId = 0;
     frame.pUserData = NULL;
-    ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_YUV420_SEMIPLANAR);
+    //ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_YUV420_SEMIPLANAR);
+    ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_BGR888);
     if (AX_SKEL_SUCC != ret) {
         printf("ReadFrame failed! ret = 0x%x\n", ret);
         FreeFrame(frame.stFrame);
@@ -75,7 +76,7 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    stInitParam.pStrModelDeploymentPath = "../../../models";
+    stInitParam.pStrModelDeploymentPath = "/models";
     ret = AX_SKEL_Init(&stInitParam);
     if (AX_SKEL_SUCC != ret) {
         printf("AX_SKEL_Init failed! ret = 0x%x\n", ret);

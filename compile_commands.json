@@ -1,0 +1,82 @@
+[
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -isystem /home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0   -std=gnu++11 -o CMakeFiles/hvcfp_demo.dir/demo/hvcfp_demo.cpp.o -c /home/dima/ax-npu-kit-650/demo/hvcfp_demo.cpp",
+  "file": "/home/dima/ax-npu-kit-650/demo/hvcfp_demo.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0   -std=gnu++11 -o CMakeFiles/ax_skel_getcap.dir/demo/ax_skel_getcap.cpp.o -c /home/dima/ax-npu-kit-650/demo/ax_skel_getcap.cpp",
+  "file": "/home/dima/ax-npu-kit-650/demo/ax_skel_getcap.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0   -std=gnu++11 -o CMakeFiles/ax_skel_version.dir/demo/ax_skel_version.cpp.o -c /home/dima/ax-npu-kit-650/demo/ax_skel_version.cpp",
+  "file": "/home/dima/ax-npu-kit-650/demo/ax_skel_version.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/api/ax_skel_api.cpp.o -c /home/dima/ax-npu-kit-650/src/api/ax_skel_api.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/api/ax_skel_api.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/mgr/model_mgr.cpp.o -c /home/dima/ax-npu-kit-650/src/mgr/model_mgr.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/mgr/model_mgr.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/mgr/ppl_mgr.cpp.o -c /home/dima/ax-npu-kit-650/src/mgr/ppl_mgr.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/mgr/ppl_mgr.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/utils/jenc.cpp.o -c /home/dima/ax-npu-kit-650/src/utils/jenc.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/utils/jenc.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/inference/engine_wrapper.cpp.o -c /home/dima/ax-npu-kit-650/src/inference/engine_wrapper.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/inference/engine_wrapper.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/pipeline/ax_skel_pipeline.cpp.o -c /home/dima/ax-npu-kit-650/src/pipeline/ax_skel_pipeline.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/pipeline/ax_skel_pipeline.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/pipeline/hvcfp/pipeline_hvcfp.cpp.o -c /home/dima/ax-npu-kit-650/src/pipeline/hvcfp/pipeline_hvcfp.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/pipeline/hvcfp/pipeline_hvcfp.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/pipeline/hvcfp/tracker_dealer.cpp.o -c /home/dima/ax-npu-kit-650/src/pipeline/hvcfp/tracker_dealer.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/pipeline/hvcfp/tracker_dealer.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/tracker/byteTracker.cpp.o -c /home/dima/ax-npu-kit-650/src/tracker/byteTracker.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/tracker/byteTracker.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/tracker/kalmanFilter.cpp.o -c /home/dima/ax-npu-kit-650/src/tracker/kalmanFilter.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/tracker/kalmanFilter.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/tracker/lapjv.cpp.o -c /home/dima/ax-npu-kit-650/src/tracker/lapjv.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/tracker/lapjv.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/tracker/track.cpp.o -c /home/dima/ax-npu-kit-650/src/tracker/track.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/tracker/track.cpp"
+},
+{
+  "directory": "/home/dima/ax-npu-kit-650/build",
+  "command": "/opt/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++  -DCHIP_AX650 -D__AX_SKEL_DEBUG__ -Dax_skel_EXPORTS -I/home/dima/ax-npu-kit-650/ax650n_bsp_sdk/msp/out/include -I/home/dima/ax-npu-kit-650/src/3rdparty/eigen3 -I/home/dima/ax-npu-kit-650/inc -I/home/dima/ax-npu-kit-650/src -I/home/dima/ax-npu-kit-650/third-party/libopencv-4.5.5-aarch64/include/opencv4  -fvisibility=hidden -g -O0 -fPIC   -std=gnu++11 -o CMakeFiles/ax_skel.dir/src/tracker/trackUtils.cpp.o -c /home/dima/ax-npu-kit-650/src/tracker/trackUtils.cpp",
+  "file": "/home/dima/ax-npu-kit-650/src/tracker/trackUtils.cpp"
+}
+]

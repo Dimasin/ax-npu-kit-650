@@ -20,13 +20,13 @@ namespace skel {
         template <typename T>
         class CSingleton {
         public:
-            static T *GetInstance(AX_VOID) noexcept(std::is_nothrow_constructible<T>::value) {
+            static T *GetInstance() noexcept(std::is_nothrow_constructible<T>::value) {
                 static T instance;
                 return &instance;
             };
 
         protected:
-            CSingleton(AX_VOID) noexcept = default;
+            CSingleton() noexcept = default;
             virtual ~CSingleton(AX_VOID) = default;
 
         private:

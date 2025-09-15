@@ -23,7 +23,8 @@ using namespace std;
 using namespace skel::tracker;
 using namespace skel::utils;
 
-static std::vector<std::string> HVCFP_CLASS_NAMES = {"body", "vehicle", "cycle", "plate"};
+// static std::vector<std::string> HVCFP_CLASS_NAMES = {"body", "vehicle", "cycle", "plate"};
+static std::vector<std::string> HVCFP_CLASS_NAMES = {"body", "vehicle", "plate"};
 
 AX_S32 skel::ppl::PipelineHVCFP::Init(const AX_SKEL_HANDLE_PARAM_T *pstParam) {
     CHECK_PTR(pstParam);
