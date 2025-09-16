@@ -67,8 +67,8 @@ int main(int argc, char** argv) {
     frame.nStreamId = 0;
     frame.nFrameId = 0;
     frame.pUserData = NULL;
-    //ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_YUV420_SEMIPLANAR);
-    ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_BGR888);
+    ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_YUV420_SEMIPLANAR);
+    //ret = ReadFrame(frame.stFrame, filename, "hvcfp", AX_FORMAT_BGR888);
     if (AX_SKEL_SUCC != ret) {
         printf("ReadFrame failed! ret = 0x%x\n", ret);
         FreeFrame(frame.stFrame);

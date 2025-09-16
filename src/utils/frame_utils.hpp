@@ -163,7 +163,7 @@ namespace skel {
             return t;
         }
 
-        static inline int CropResizeFrame(const AX_VIDEO_FRAME_T& src, AX_VIDEO_FRAME_T& dst, int nWidth, int nHeight, const skel::infer::Rect& crop_rect)
+        static inline int CropResizeFrame(const AX_VIDEO_FRAME_T& src, AX_VIDEO_FRAME_T& dst, int nWidth, int nHeight, AX_IVPS_ASPECT_RATIO_E eMode, const skel::infer::Rect& crop_rect)
         {
             int ret = 0;
             ret = AllocFrame(dst, "crop_resize", nWidth, nHeight, src.enImgFormat);
@@ -179,7 +179,7 @@ namespace skel {
             tAspectRatio.eAligns[0] = AX_IVPS_ASPECT_RATIO_HORIZONTAL_CENTER;
             tAspectRatio.eAligns[1] = AX_IVPS_ASPECT_RATIO_VERTICAL_CENTER;
             tAspectRatio.nBgColor = 0x00000000;
-            tAspectRatio.eMode = AX_IVPS_ASPECT_RATIO_AUTO;
+            tAspectRatio.eMode = eMode;
 
             AX_VIDEO_FRAME_T cropSrc;
             memcpy(&cropSrc, &src, sizeof(AX_VIDEO_FRAME_T));
@@ -205,6 +205,31 @@ namespace skel {
                 fprintf(stderr, "AX_IVPS_CropResizeTdp error, ret=0x%8x\n", ret);
                 return ret;
             }
+
+            return ret;
+        }
+
+        static inline int NV12toBGR888(const AX_VIDEO_FRAME_T& src, AX_VIDEO_FRAME_T& dst)
+        {
+            int ret = 0;
+            ret = AllocFrame(dst, "nv12tobgr", src.u32Width, src.u32Height, AX_FORMAT_BGR888);
+            if (ret != 0)
+            {
+                ALOGE("Alloc crop_resize frame failed!\n");
+                return ret;
+            }
+
+            ret = AX_IVPS_CscTdp(&src, &dst);
+            if (ret != 0)
+            {
+                FreeFrame(dst);
+                fprintf(stderr, "AX_IVPS_CscTdp error, ret=0x%8x\n", ret);
+                return ret;
+            }
+            dst.s16CropX = src.s16CropX;
+            dst.s16CropY = src.s16CropY;
+            dst.s16CropWidth = src.s16CropWidth;
+            dst.s16CropHeight = src.s16CropHeight;
 
             return ret;
         }

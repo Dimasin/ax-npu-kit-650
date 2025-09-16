@@ -120,8 +120,8 @@ namespace skel {
 
                 // nms & rescale coords & select class
                 outputs.clear();
-                skel::detection::reverse_letterbox(proposals, outputs, m_config.nms_thresh, m_input_size[0], m_input_size[1], img.u32Height, img.u32Width);
-                //skel::detection::get_out_bbox(proposals, outputs, m_config.nms_thresh, m_input_size[0], m_input_size[1], img.u32Height, img.u32Width);
+                //skel::detection::reverse_letterbox(proposals, outputs, m_config.nms_thresh, m_input_size[0], m_input_size[1], img.u32Height, img.u32Width);
+                skel::detection::get_out_bbox(proposals, outputs, m_config.nms_thresh, m_input_size[0], m_input_size[1], img.u32Height, img.u32Width);
 
                 if (!m_config.want_classes.empty())
                 {
