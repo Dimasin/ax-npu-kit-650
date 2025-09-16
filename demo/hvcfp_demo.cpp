@@ -99,6 +99,7 @@ int main(int argc, char** argv) {
     {
         // set config
         MakeConfig(&stConfig, "track_disable", false);
+        MakeConfig(&stConfig, "push_disable", false);
 
         ret = AX_SKEL_SetConfig(handle, &stConfig);
         if (AX_SKEL_SUCC != ret) {

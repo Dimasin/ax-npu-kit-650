@@ -20,8 +20,8 @@ namespace skel {
         public:
             HVCFPDetector()
             {
-                m_config.cls_thresh = 0.3f;
-                m_config.nms_thresh = 0.45f;
+                m_config.cls_thresh = 0.2f;
+                m_config.nms_thresh = 0.5f;
                 m_config.min_size = skel::infer::Size(1, 1);
                 m_config.strides = std::vector<std::vector<int>>{{8}, {16}, {32}};
 //                m_config.want_classes = std::vector<int>{0};

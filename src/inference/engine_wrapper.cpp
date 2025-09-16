@@ -317,7 +317,34 @@ namespace skel
 
         int EngineWrapper::Preprocess(const AX_VIDEO_FRAME_T& src, AX_VIDEO_FRAME_T& dst, const Rect& crop_rect)
         {
-            return utils::CropResizeFrame(src, dst, m_input_size[1], m_input_size[0], AX_IVPS_ASPECT_RATIO_STRETCH, crop_rect);
+            int ret = 0;
+
+            if ((m_input_size[0] != src.u32Height) || (m_input_size[1] != src.u32Width)) {
+                AX_VIDEO_FRAME_T tmp;
+                ret = utils::CropResizeFrame(src, tmp, m_input_size[1], m_input_size[0], AX_IVPS_ASPECT_RATIO_STRETCH, crop_rect);
+                if (ret != 0)
+                {
+                    utils::FreeFrame(tmp);
+                    return ret;
+                }
+                ret = utils::NV12toBGR888(tmp, dst);
+                if (ret != 0)
+                {
+                    utils::FreeFrame(tmp);
+                    utils::FreeFrame(dst);
+                    return ret;
+                }
+                utils::FreeFrame(tmp);
+            }
+            else {
+                ret = utils::NV12toBGR888(src, dst);
+                if (ret != 0)
+                {
+                    utils::FreeFrame(dst);
+                    return ret;
+                }
+            }
+            return ret;
         }
 
         int EngineWrapper::Run(const AX_VIDEO_FRAME_T& stFrame)
@@ -327,17 +354,8 @@ namespace skel
 
             int ret = 0;
 
-            //Convert NV12 to BGR888
-            AX_VIDEO_FRAME_T dst;
-            ret = utils::NV12toBGR888(stFrame, dst);
-            if (ret != 0)
-            {
-                utils::FreeFrame(dst);
-                return ret;
-            }
-
             // 7.1 fill input & prepare to inference
-            ret = utils::push_io_input(&dst, m_io);
+            ret = utils::push_io_input(&stFrame, m_io);
             if (0 != ret) {
                 ALOGE("push_io_input failed. ret=0x%x\n", ret);
                 ret = AX_ERR_SKEL_ILLEGAL_PARAM;
@@ -353,7 +371,6 @@ namespace skel
                     return ret;
                 }
             }
-
             return ret;
         }
 
