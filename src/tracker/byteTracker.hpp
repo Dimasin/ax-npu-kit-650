@@ -39,8 +39,8 @@ namespace skel {
                 n_classes(_n_classes),
                 frame_rate(DEFAULT_FRAME_RATE),
                 track_buffer(DEFAULT_TRACK_BUFFER),
-                high_det_thresh(DEFAULT_HIGH_DET_THRESH),
-                new_track_thresh(DEFAULT_NEW_TRACK_THRESH),
+                high_det_thresh(DEFAULT_HIGH_DET_THRESH - 0.3f),
+                new_track_thresh(DEFAULT_NEW_TRACK_THRESH - 0.1f),
                 high_match_thresh(DEFAULT_HIGH_MATCH_THRESH),
                 low_match_thresh(DEFAULT_LOW_MATCH_THRESH),
                 unconfirmed_match_thresh(DEFAULT_UNCONFIRMED_MATCH_THRESH) {

@@ -102,11 +102,11 @@ typedef struct axSKEL_PARAM_T {
         memset(&stCropEncoderThreshold, 0x00, sizeof(stCropEncoderThreshold));
         memset(&stPanoramaResizeConfig, 0x00, sizeof(stPanoramaResizeConfig));
         memset(&stPushPanoramaConfig, 0x00, sizeof(stPushPanoramaConfig));
-        stFilterMaps["body"] = {skel::infer::Size(), DEFAULT_BODY_PROB_THRESHOLD};
-        stFilterMaps["vehicle"] = {skel::infer::Size(), DEFAULT_VEHICLE_PROB_THRESHOLD};
+        stFilterMaps["body"] = {skel::infer::Size(), DEFAULT_BODY_PROB_THRESHOLD - 0.35f};
+        stFilterMaps["vehicle"] = {skel::infer::Size(), DEFAULT_VEHICLE_PROB_THRESHOLD - 0.3f};
         stFilterMaps["cycle"] = {skel::infer::Size(), DEFAULT_CYCLE_PROB_THRESHOLD};
         stFilterMaps["face"] = {skel::infer::Size(), DEFAULT_FACE_PROB_THRESHOLD};
-        stFilterMaps["plate"] = {skel::infer::Size(), DEFAULT_PLATE_PROB_THRESHOLD};
+        stFilterMaps["plate"] = {skel::infer::Size(), DEFAULT_PLATE_PROB_THRESHOLD - 0.3f};
         stPushStrategy.ePushMode = AX_SKEL_PUSH_MODE_BEST;
         stPushStrategy.nIntervalTimes = 2000;
         stPushStrategy.nPushCounts = 1;
